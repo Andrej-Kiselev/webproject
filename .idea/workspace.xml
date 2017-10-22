@@ -74,17 +74,37 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="second.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="second.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/second.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-510">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="476">
+              <caret line="58" column="21" lean-forward="true" selection-start-line="58" selection-start-column="21" selection-end-line="58" selection-end-column="21" />
               <folding>
                 <marker date="1508679434433" expanded="true" signature="30:50" ph="..." />
                 <marker date="1508679434433" expanded="true" signature="1628:1642" ph="..." />
                 <marker date="1508679434433" expanded="true" signature="1700:1716" ph="..." />
                 <marker date="1508679434433" expanded="true" signature="1757:1776" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VerifyCsrfToken.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EncryptCookies.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Middleware/EncryptCookies.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -264,28 +284,6 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Middleware" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webproject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webproject" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Http" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="Controllers" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -323,18 +321,17 @@
       <option name="presentableId" value="Default" />
       <updated>1508672041738</updated>
       <workItem from="1508672043828" duration="649000" />
-      <workItem from="1508679852672" duration="27000" />
+      <workItem from="1508679852672" duration="290000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="676000" />
+    <option name="totallyTimeSpent" value="939000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25266525" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25266525" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -483,14 +480,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/second.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-510">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="476">
+          <caret line="58" column="21" lean-forward="true" selection-start-line="58" selection-start-column="21" selection-end-line="58" selection-end-column="21" />
           <folding>
             <marker date="1508679434433" expanded="true" signature="30:50" ph="..." />
             <marker date="1508679434433" expanded="true" signature="1628:1642" ph="..." />
             <marker date="1508679434433" expanded="true" signature="1700:1716" ph="..." />
             <marker date="1508679434433" expanded="true" signature="1757:1776" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/EncryptCookies.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
