@@ -124,6 +124,7 @@
       <list>
         <option value="$PROJECT_DIR$/app/Http/Controllers/mainPageController.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
