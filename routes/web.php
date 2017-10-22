@@ -12,3 +12,4 @@
 */
 
 Route::get('/', 'mainPageController@index');
+Route::get('main', 'mainPageController@index');
