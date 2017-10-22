@@ -79,7 +79,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    КАФЕДРА ГИСиТ
                 </div>
 
                 <div class="links">
