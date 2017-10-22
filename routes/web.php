@@ -13,3 +13,6 @@
 
 Route::get('/', 'mainPageController@index');
 //Route::get('main', 'mainPageController@index');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
