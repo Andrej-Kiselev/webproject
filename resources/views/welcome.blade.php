@@ -79,7 +79,11 @@
 
             <div class="content">
                 <div class="title m-b-md">
+<<<<<<< HEAD
                     Laravel Laravel
+=======
+                    КАФЕДРА ГИСиТ
+>>>>>>> master
                 </div>
 
                 <div class="links">
