@@ -79,6 +79,8 @@
         <div class="title m-b-md">
             New second view <br>
              ШТОРМ
+
+            <h4><a href="/about">touch me</a></h4>
         </div>
 
 
