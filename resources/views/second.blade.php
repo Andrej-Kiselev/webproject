@@ -80,7 +80,7 @@
     <div class="content">
         <div class="title m-b-md">
             New second view <br>
-            ШТОРМ
+             ШТОРМ
         </div>
 
 
