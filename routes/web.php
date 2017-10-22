@@ -13,4 +13,4 @@
 
 Route::get('/', 'mainPageController@index');
 Route::get('main', 'mainPageController@index');
-Route::get('showme', 'SecondController@index');
+Route::get('/showme', 'SecondController@index');
