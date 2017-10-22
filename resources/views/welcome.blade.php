@@ -79,10 +79,12 @@
 
             <div class="content">
                 <div class="title m-b-md">
+                    Laravel Laravel<br>
                     КАФЕДРА ГИСиТ
                 </div>
 
                 <div class="links">
+                <h2><a href="/showme">TOUCH ME, ANDREJJ</a></h2>
                     <a href="https://laravel.com/docs">Documentation</a>
                     <a href="https://laracasts.com">Laracasts</a>
                     <a href="https://laravel-news.com">News</a>

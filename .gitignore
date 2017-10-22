@@ -1,10 +1,14 @@
 vendor/
+.idea/
+.idea/workspace.xml
 node_modules/
 npm-debug.log
+*.xml
 
 # Laravel 4 specific
 bootstrap/compiled.php
 app/storage/
+.idea/workspace.xml
 
 # Laravel 5 & Lumen specific
 public/storage
@@ -15,7 +19,10 @@ storage/*.key
 .env
 Homestead.yaml
 Homestead.json
+.idea/workspace.xml
+
 
 # Rocketeer PHP task runner and deployment package. https://github.com/rocketeers/rocketeer
 .rocketeer/
+.idea/workspace.xml
 .idea/workspace.xml
