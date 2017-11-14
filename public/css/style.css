@@ -1,0 +1,113 @@
+.hover_a{
+	color: #004691;
+	background-color: #bde4f6;
+}
+
+.main_block {
+    height: 100%;
+    float: left;
+    color: #004691;
+    font: 15px bold ;
+    display: table;
+}
+
+.image {
+    position: relative;
+    width: 100%; /* for IE 6 */
+}
+
+/*.main {
+    background-image: url("../images/rus.png");
+    background-size: cover;
+}*/
+
+.slideshow{
+    border: 2px solid #004691;
+    height:auto;
+    width:auto;
+    max-width: 400px
+}
+
+.main_block:last-child img {
+    margin-right: 10px;
+}
+
+.valign_center {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.copyright {
+    background-color: #004691;
+    text-align: center;
+    font-weight: bold;
+    color:white;
+}
+ .btn-info{
+     background-color: #004691;
+     border-color: #004691;
+ }
+
+.container{
+    background-color: rgb(39,52,139);
+    color: #ffffff;
+    box-shadow: 0 0 15px rgba(0,0,0,1)
+}
+
+.newsbox{
+	float: left;
+	background-color: white;
+	width: 40%;
+	height: 100%;
+	overflow: auto;
+}
+
+ul:first-child{
+    padding-left: 20px;
+}
+
+p {
+    color:rgb(39,52,139);
+}
+
+.science-form {
+    width: 600px;
+    margin: 10px 100px;
+
+}
+
+ul li{
+	margin-left: 2px;
+}
+
+footer {
+  text-align: center;
+  font-size: 16px;
+}
+
+.section_addon {
+	height: 100vh;
+	background-color: white/*rgba(29,113,184,0.1)*/;
+	color: rgb(39,52,139);
+	/*margin-top: 100px;*/
+	padding-top: 170px;
+	overflow: auto;
+}
+
+.article_button{
+	margin: 10px 0px;
+	width: 30%;
+	display: inline;
+}
+
+body{
+	background-color: rgba(29,113,184,0.1);
+}
+
+tr {
+	border-bottom: 1px solid #eee;
+}
+#header {
+	font-weight: bold;
+	text-align: center;
+}

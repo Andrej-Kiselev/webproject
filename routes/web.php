@@ -11,6 +11,14 @@
 |
 */
 
-Route::get('/', 'mainPageController@index');
+Route::get('', 'mainPageController@index');
 Route::get('main', 'mainPageController@index');
-Route::get('/showme', 'SecondController@index');
+Route::get('education', 'PagesController@education');
+Route::get('science', 'PagesController@science');
+Route::get('contacts', 'PagesController@contacts');
+Route::get('authorization', 'PagesController@authorization');
+
+Route::get('admin', 'AdminPagesController@admin_authorization');
+
+
+Route::get('account', 'PagesController@account');
