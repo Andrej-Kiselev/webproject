@@ -12,6 +12,16 @@
 */
 
 Route::get('/', 'mainPageController@index');
-Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/about', 'AboutController@index')->name('about');
+Route::get('main', 'mainPageController@index');
+Route::get('education', 'PagesController@education');
+Route::get('science', 'PagesController@science');
+Route::get('contacts', 'PagesController@contacts');
+Route::get('authorization', 'PagesController@authorization');
+
+Route::get('admin', 'AdminPagesController@admin_authorization');
+
+Route::get('account', 'PagesController@account');
+
 Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
