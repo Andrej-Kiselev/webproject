@@ -20,8 +20,8 @@ Route::get('authorization', 'PagesController@authorization');
 
 Route::get('admin', 'AdminPagesController@admin_authorization');
 
-Route::get('account', 'PagesController@account');
-
+Route::get('account', 'PagesController@account')
+    ->middleware('auth');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

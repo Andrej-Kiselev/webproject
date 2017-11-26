@@ -13,6 +13,6 @@
 <!-- VK Widget -->
 <div id="vk_groups" style="float: right;"></div>
 <script type="text/javascript">
-VK.Widgets.Group("vk_groups", {mode: 2, wide:1, width: "400", height: "466"}, 139451775);
+VK.Widgets.Group("vk_groups", {mode: 2, wide:1, width: "400", height: "780"}, 139451775);
 </script>
 @stop
