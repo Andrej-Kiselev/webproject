@@ -20,4 +20,13 @@ class User extends Model implements Authenticatable
         'password', 'remember_token',
     ];
 
+    public function HasRole () {
+        $logica = User::where('role', 'admin')->get();
+        foreach ($logica as $logic){
+            if ($logic->role == 'admin')
+                return true;
+            else
+                return false;
+        }
+    }
 }
