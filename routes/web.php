@@ -30,3 +30,5 @@ Route::get('account', 'PagesController@account')
 Auth::routes();
 
 Route::get('/notAllow', 'HomeController@index')->name('home');
+
+Route::post('/adduser', 'AdminPagesController@addUser');

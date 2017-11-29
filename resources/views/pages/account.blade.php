@@ -18,6 +18,7 @@
     <button type="button" class="btn btn-lg btn-info article_button">Добавить статью</button>
     <button type="button" class="btn btn-lg btn-info article_button" style="width: 38%;">Редактировать статью</button>
     <button type="button" class="btn btn-lg btn-info article_button">Удалить статью</button>
+    <button type="button" class="btn btn-lg btn-info " href="showallusers">Показать всех авторов</button>
 
     <!--Циклический вывод работ автора и соавторов из БД-->
     <table style="margin: 10px; width: 100%;">
