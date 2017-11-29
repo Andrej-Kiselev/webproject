@@ -40,7 +40,44 @@
                     <li><a href="education">ОБРАЗОВАТЕЛЬНАЯ ДЕЯТЕЛЬНОСТЬ</a></li>
                     <li><a href="science">НАУЧНАЯ И ПРОЕКТНАЯ ДЕЯТЕЛЬНОСТЬ</a></li>
                     <li><a href="contacts">КОНТАКТЫ</a></li>
-                    <li><a href="authorization">ЛИЧНЫЙ КАБИНЕТ</a></li>
+                    <ul class="nav navbar-nav navbar-right">
+                        <!-- Authentication Links -->
+                        @guest
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                ЛИЧНЫЙ КАБИНЕТ<span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="{{ route('login') }}">Войти</a></li>
+                            </ul>
+                        </li>
+                        @else
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                </a>
+
+                                <ul class="dropdown-menu" role="menu">
+                                    <li>
+                                        <a href="{{ route('account') }}">
+                                            Перейти в личный кабинет
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('logout') }}"
+                                           onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                            Выйти
+                                        </a>
+
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                            {{ csrf_field() }}
+                                        </form>
+                                    </li>
+                                </ul>
+                            </li>
+                            @endguest
+                    </ul>
                 </ul>
             </div>
     </nav>

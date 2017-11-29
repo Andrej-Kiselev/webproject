@@ -12,7 +12,7 @@
   </div>
   <div class="col-md-7">
     <div>
-      <h2 class="text-center">Фамилия Имя Отчество</h2>
+      <h2 class="text-center">{{Auth::user()->surname}} {{Auth::user()->name}} {{Auth::user()->patronymic}}</h2>
       <hr style="margin: 10px">
     </div>
     <button type="button" class="btn btn-lg btn-info article_button">Добавить статью</button>

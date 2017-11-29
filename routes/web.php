@@ -26,7 +26,7 @@ Route::get('science', 'PagesController@science');
 Route::get('contacts', 'PagesController@contacts');
 Route::get('authorization', 'PagesController@authorization');
 Route::get('account', 'PagesController@account')
-    ->middleware('auth');
+    ->middleware('auth')->name('account');
 Auth::routes();
 
 Route::get('/notAllow', 'HomeController@index')->name('home');
