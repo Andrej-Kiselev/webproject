@@ -22,6 +22,7 @@ Route::get('/', 'mainPageController@index');
 Route::get('main', 'mainPageController@index');
 Route::get('home', 'mainPageController@index');
 Route::get('education', 'PagesController@education');
+Route::get('showaddpubl', 'PagesController@showFormToAddPublication');
 Route::get('science', 'PagesController@science');
 Route::get('contacts', 'PagesController@contacts');
 Route::get('authorization', 'PagesController@authorization');
@@ -31,4 +32,5 @@ Auth::routes();
 
 Route::get('/notAllow', 'HomeController@index')->name('home');
 
+Route::post('/addpublication', 'PagesController@addpublication');
 Route::post('/adduser', 'AdminPagesController@addUser');

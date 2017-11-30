@@ -15,7 +15,10 @@
       <h2 class="text-center">{{Auth::user()->surname}} {{Auth::user()->name}} {{Auth::user()->patronymic}}</h2>
       <hr style="margin: 10px">
     </div>
-    <button type="button" class="btn btn-lg btn-info article_button">Добавить статью</button>
+
+    <form>
+      <input type="button"class="btn btn-lg btn-info article_button" value="Добавить статью" onClick='location.href="showaddpubl"'>
+    </form>
     <button type="button" class="btn btn-lg btn-info article_button" style="width: 38%;">Редактировать статью</button>
     <button type="button" class="btn btn-lg btn-info article_button">Удалить статью</button>
     <button type="button" class="btn btn-lg btn-info " href="showallusers">Показать всех авторов</button>
