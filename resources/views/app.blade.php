@@ -64,7 +64,7 @@
                                         </a>
                                     </li>
 
-                                    @if ((Auth::check()) && (Auth::user()->HasRole() == true))
+                                    @if ((Auth::check()) && (Auth::user()->HasRole(Auth::user()->role) == true))
                                         <li>
                                             <a href="admin">
                                                 Перейти панель администратора

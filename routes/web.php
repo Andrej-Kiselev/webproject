@@ -13,7 +13,7 @@ use App\Http\Controllers;
 */
 //Route::get('adminPanel', 'AdminPagesController@page'); //Здесь не на что смотреть, просто проходим мимо
 Route::get('admin', function(){
-    if ((Auth::check()) && (Auth::user()->HasRole() == true))
+    if ((Auth::check()) && (Auth::user()->HasRole(Auth::user()->role)))
         return view('admin.admin_authorization');
     else
         return redirect()->action('mainPageController@index');
