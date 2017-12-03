@@ -27,12 +27,6 @@
         <td></td>
         <td></td>
       </tr>
-      <tr>
-        <td>Название</td>
-        <td>Автор</td>
-        <td><a href="#"><span class="glyphicon glyphicon-pencil"></span></a></td>
-        <td><a href="#"><span class="glyphicon glyphicon-trash"></span></a></td>
-      </tr>
 
       @foreach($publications as $publication)
         @foreach($publUsers as $record)
