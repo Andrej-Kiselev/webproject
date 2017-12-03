@@ -24,7 +24,7 @@ class AdminPagesController extends Controller
 
     public function deleteUser($id){
         if (!$id)
-            echo "Nothing!";
+            echo "Nothing to watch!";
         else {
             User::findOrFail($id)->delete();
             $usersList = User::all()->where('role', '<>', 'admin');
