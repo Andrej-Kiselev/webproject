@@ -22,7 +22,9 @@
     <form role="form" method="POST" action="/addpublication">
         {{ csrf_field() }}
 
-        <div style="float: left; width: 45%;">
+        <input type="hidden" name="record" value="">
+
+      <div style="float: left; width: 45%;">
         <p>Соавторы:</p>
 
         <div id="coauthors" class="form-group">

@@ -6,7 +6,8 @@
   <br>
   <form role="form" method="POST" action="/adduser">
       {{ csrf_field() }}
-      
+
+      <input type="hidden" name="record" value="">
       <div style="float: left; width: 45%;">
         <div class="form-group">
             <textarea class="form-control" placeholder="Фамилия" name="surname" rows="1"></textarea>
@@ -38,22 +39,17 @@
         <td>Пользователь</td>
         <td>E-mail</td><td></td>
       </tr>
-      <tr>
-        <td>Автор Автор Автор Автор</td>
-        <td>Почта Почта Почта</td>
-        <td><a href="#"><span class="glyphicon glyphicon-trash"></span></a></td>
-      </tr>
-      <tr>
-        <td>Автор Автор Автор Автор</td>
-        <td>Почта Почта Почта</td>
-        <td><a href="#"><span class="glyphicon glyphicon-trash"></span></a></td>
-      </tr>
+      @foreach($usersList as $user)
+        <tr>
+          <td>{{$user->surname}}{{$user->name}}{{$user->patronymic}}</td>
+          <td>{{$user->email}}</td>
+          <td><a id="{{$user->id}}" href="/admin/user/{{$user->id}}"><span class="glyphicon glyphicon-trash"></span></a></td>
+        </tr>
+      @endforeach
     </table>
   </div>
 </div>
-
-<hr >
-
+<hr>
 <div>
   <div style="float: left; width: 45%; margin-top: 10px;">
   <form role="form" method="POST" action="/adduser">

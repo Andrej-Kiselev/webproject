@@ -21,4 +21,15 @@ class AdminPagesController extends Controller
         User::create($inputUserData);
         return view('admin.admin_authorization');
     }
+
+    public function deleteUser($id){
+        if (!$id)
+            echo "Nothing!";
+        else {
+            User::findOrFail($id)->delete();
+            $usersList = User::all()->where('role', '<>', 'admin');
+            return view('admin.admin_authorization', compact('usersList'));
+        }
+    }
+
 }

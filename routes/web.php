@@ -13,8 +13,10 @@ use App\Http\Controllers;
 */
 //Route::get('adminPanel', 'AdminPagesController@page'); //Здесь не на что смотреть, просто проходим мимо
 Route::get('admin', function(){
-    if ((Auth::check()) && (Auth::user()->HasRole(Auth::user()->role)))
-        return  view('admin.admin_authorization');//redirect()->action('AdminPagesController@index');
+    if ((Auth::check()) && (Auth::user()->HasRole(Auth::user()->role))) {
+        $usersList = User::all()->where("role", "<>", "admin");
+        return view('admin.admin_authorization', compact('usersList'));//redirect()->action('AdminPagesController@index');
+    }
     else
         return redirect()->action('mainPageController@index');
 });
@@ -34,3 +36,4 @@ Route::get('/notAllow', 'HomeController@index')->name('home');
 
 Route::post('/addpublication', 'PagesController@addpublication');
 Route::post('/adduser', 'AdminPagesController@addUser');
+Route::get('/admin/user/{id}', 'AdminPagesController@deleteUser');
