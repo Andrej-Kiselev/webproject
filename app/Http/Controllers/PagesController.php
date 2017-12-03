@@ -7,6 +7,7 @@ use App\PublishingHouse;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class PagesController extends Controller
 {
@@ -32,7 +33,9 @@ class PagesController extends Controller
 
     public function account()
     {
-        return view('pages/account');
+        $publUsers = Publication::getTablePublicationUsers();
+        $publications = Publication::all();
+        return view('pages/account', ['publUsers' => $publUsers, 'publications' => $publications]);
     }
 
     public function showFormToAddPublication()
@@ -46,6 +49,6 @@ class PagesController extends Controller
         $inputPublicationData = $request->all();
         $inputPublicationData['user_id'] = Auth::user()->id;
         Publication::create($inputPublicationData);
-        return view('pages/account');
+        return redirect()->route('account');
     }
 }

@@ -36,6 +36,6 @@ class User extends Model implements Authenticatable
 
     public function publications()
     {
-        return $this->belongsToMany('App\Publication', 'user_publications');
+        return $this->belongsToMany('App\Publication', 'user_publications')->withTimestamps();
     }
 }
