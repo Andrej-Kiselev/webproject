@@ -33,4 +33,9 @@ class User extends Model implements Authenticatable
                 return false;
         }*/
     }
+
+    public function publications()
+    {
+        return $this->belongsToMany('App\Publication', 'user_publications');
+    }
 }

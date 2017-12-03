@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use Illuminate\Http\Request;
 
 class AdminPagesController extends Controller
@@ -18,6 +19,6 @@ class AdminPagesController extends Controller
         $inputUserData['password'] = bcrypt($request['password']);
 
         User::create($inputUserData);
-        return view('pages/account');
+        return view('admin.admin_authorization');
     }
 }
