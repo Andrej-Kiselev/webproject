@@ -52,9 +52,10 @@
 <hr>
 <div>
   <div style="float: left; width: 45%; margin-top: 10px;">
-  <form role="form" method="POST" action="/adduser">
+  <form role="form" method="POST" action="/addPubl">
+    {{ csrf_field() }}
     <div class="form-group" >
-        <textarea class="form-control" placeholder="Издательство" name="name_of_publishing_house" rows="1"></textarea>
+        <textarea class="form-control" placeholder="Издательство" name="name" rows="1"></textarea>
     </div>
     <input type="submit" class="btn btn-lg btn-info btn-block" value="Добавить издательство">
   </form>
@@ -64,14 +65,12 @@
     <tr id="header">
       <td>Издательство</td><td></td>
     </tr>
+    @foreach($houses as $house)
     <tr>
-      <td>Автор Автор Автор Автор</td>
-      <td><a href="#"><span class="glyphicon glyphicon-trash"></span></a></td>
+      <td>{{$house->name}}</td>
+      <td><a href="/admin/publish/{{$house->id}}"><span class="glyphicon glyphicon-trash"></span></a></td>
     </tr>
-    <tr>
-      <td>Автор Автор Автор Автор</td>
-      <td><a href="#"><span class="glyphicon glyphicon-trash"></span></a></td>
-    </tr>
+    @endforeach
   </table>
 </div>
 </div>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\PublishingHouse;
 use App\User;
 use Illuminate\Http\Request;
 
@@ -17,9 +18,8 @@ class AdminPagesController extends Controller
         $user = new User();
         $inputUserData = $request->all();
         $inputUserData['password'] = bcrypt($request['password']);
-
         User::create($inputUserData);
-        return view('admin.admin_authorization');
+        return redirect()->to('admin');
     }
 
     public function deleteUser($id){
@@ -27,9 +27,23 @@ class AdminPagesController extends Controller
             echo "Nothing to watch!";
         else {
             User::findOrFail($id)->delete();
-            $usersList = User::all()->where('role', '<>', 'admin');
-            return view('admin.admin_authorization', compact('usersList'));
+            return redirect()->to('admin');
         }
     }
 
+    public function addPublic (Request $request) {
+        $publish = $request->all();
+        $inputReq = $publish['name'];
+        PublishingHouse::create($publish);
+        return redirect()->to('admin');
+    }
+
+    public function deletePublic($id){
+        if (!$id)
+            echo "Nothing to watch!";
+        else {
+            PublishingHouse::findOrFail($id)->delete();
+            return redirect()->to('admin');
+        }
+    }
 }

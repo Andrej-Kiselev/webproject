@@ -15,7 +15,8 @@ use App\Http\Controllers;
 Route::get('admin', function(){
     if ((Auth::check()) && (Auth::user()->HasRole(Auth::user()->role))) {
         $usersList = User::all()->where("role", "<>", "admin");
-        return view('admin.admin_authorization', compact('usersList'));//redirect()->action('AdminPagesController@index');
+        $houses = \App\PublishingHouse::all();
+        return view('admin.admin_authorization', compact(['usersList', 'houses']));//redirect()->action('AdminPagesController@index');
     }
     else
         return redirect()->action('mainPageController@index');
@@ -36,4 +37,6 @@ Route::get('/notAllow', 'HomeController@index')->name('home');
 
 Route::post('/addpublication', 'PagesController@addpublication');
 Route::post('/adduser', 'AdminPagesController@addUser');
+Route::post('/addPubl', 'AdminPagesController@addPublic');
 Route::get('/admin/user/{id}', 'AdminPagesController@deleteUser');
+Route::get('/admin/publish/{id}', 'AdminPagesController@deletePublic');
