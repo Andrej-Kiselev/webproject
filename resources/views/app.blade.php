@@ -48,7 +48,7 @@
                                 ЛИЧНЫЙ КАБИНЕТ<span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu" role="menu">
-                                <li><a href="authorization">Войти</a></li>
+                                <li><a href="{{ route('login') }}">Войти</a></li>
                             </ul>
                         </li>
                         @else
@@ -63,15 +63,6 @@
                                             Перейти в личный кабинет
                                         </a>
                                     </li>
-
-                                    @if ((Auth::check()) && (Auth::user()->HasRole(Auth::user()->role) == true))
-                                        <li>
-                                            <a href="admin">
-                                                Перейти панель администратора
-                                            </a>
-                                        </li>
-                                    @endif
-
                                     <li>
                                         <a href="{{ route('logout') }}"
                                            onclick="event.preventDefault();
