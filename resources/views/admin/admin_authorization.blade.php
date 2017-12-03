@@ -6,8 +6,7 @@
   <br>
   <form role="form" method="POST" action="/adduser">
       {{ csrf_field() }}
-
-      <input type="hidden" name="record" value="">
+      
       <div style="float: left; width: 45%;">
         <div class="form-group">
             <textarea class="form-control" placeholder="Фамилия" name="surname" rows="1"></textarea>
@@ -52,7 +51,9 @@
     </table>
   </div>
 </div>
-<hr>
+
+<hr >
+
 <div>
   <div style="float: left; width: 45%; margin-top: 10px;">
   <form role="form" method="POST" action="/adduser">
