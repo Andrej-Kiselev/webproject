@@ -39,16 +39,13 @@
         <td>Пользователь</td>
         <td>E-mail</td><td></td>
       </tr>
-      <tr>
-        <td>Автор Автор Автор Автор</td>
-        <td>Почта Почта Почта</td>
-        <td><a href="#"><span class="glyphicon glyphicon-trash"></span></a></td>
-      </tr>
-      <tr>
-        <td>Автор Автор Автор Автор</td>
-        <td>Почта Почта Почта</td>
-        <td><a href="#"><span class="glyphicon glyphicon-trash"></span></a></td>
-      </tr>
+      @foreach($usersList as $user)
+        <tr>
+          <td>{{$user->surname}}{{$user->name}}{{$user->patronymic}}</td>
+          <td>{{$user->email}}</td>
+          <td><a id="{{$user->id}}" href="/admin/user/{{$user->id}}"><span class="glyphicon glyphicon-trash"></span></a></td>
+        </tr>
+      @endforeach
     </table>
   </div>
 </div>
