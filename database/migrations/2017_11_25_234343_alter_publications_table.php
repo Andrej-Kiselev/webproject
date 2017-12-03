@@ -14,9 +14,6 @@ class AlterPublicationsTable extends Migration
     public function up()
     {
         Schema::table('publications', function (Blueprint $table) {
-
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
-
             $table->foreign('publishing_houses_id')->references('id')->on('publishing_houses')->onDelete('cascade')->onUpdate('cascade');
         });
     }
@@ -29,7 +26,6 @@ class AlterPublicationsTable extends Migration
     public function down()
     {
         Schema::table('publications', function (Blueprint $table) {
-            $table->dropForeign(['user_id']);
             $table->dropForeign(['publishing_houses_id']);
         });
     }

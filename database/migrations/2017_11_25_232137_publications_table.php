@@ -20,11 +20,11 @@ class PublicationsTable extends Migration
 
             $table->integer('publishing_houses_id')->unsigned();
 
-            $table->string('name');
-            $table->string('annotation');
-            $table->integer('number_of_publication')->unsigned();
-            $table->integer('year')->unsigned();
-            $table->integer('number_of_pages')->unsigned();
+            $table->string('name_of_publication')->nullable();
+            $table->string('annotation')->nullable();
+            $table->integer('number_of_publication')->unsigned()->nullable();
+            $table->integer('year')->unsigned()->nullable();
+            $table->integer('number_of_pages')->unsigned()->nullable();
             $table->timestamps();
         });
     }
