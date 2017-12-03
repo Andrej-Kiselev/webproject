@@ -54,23 +54,24 @@
                         @else
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                    {{ Auth::user()->surname }} {{ Auth::user()-> name}} {{ Auth::user()->patronymic }} <span class="caret"></span>
                                 </a>
 
                                 <ul class="dropdown-menu" role="menu">
-                                    <li>
-                                        <a href="{{ route('account') }}">
-                                            Перейти в личный кабинет
-                                        </a>
-                                    </li>
+                                     @if ((Auth::check()) && (Auth::user()->HasRole(Auth::user()->role) == true))
+                                        <li>
+                                            <a href="admin">
+                                                Перейти на панель администратора
+                                            </a>
+                                        </li>
+                                      @else
+                                      <li>
+                                          <a href="{{ route('account') }}">
+                                              Перейти в личный кабинет
+                                          </a>
+                                      </li>
+                                    @endif
 
- -                                    @if ((Auth::check()) && (Auth::user()->HasRole(Auth::user()->role) == true))
- -                                        <li>
- -                                            <a href="admin">
- -                                                Перейти панель администратора
- -                                            </a>
- -                                        </li>
- -                                    @endif
                                     <li>
                                         <a href="{{ route('logout') }}"
                                            onclick="event.preventDefault();
