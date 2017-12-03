@@ -61,13 +61,13 @@
                                      @if ((Auth::check()) && (Auth::user()->HasRole(Auth::user()->role) == true))
                                         <li>
                                             <a href="admin">
-                                                Перейти на панель администратора
+                                                Панель администратора
                                             </a>
                                         </li>
                                       @else
                                       <li>
                                           <a href="{{ route('account') }}">
-                                              Перейти в личный кабинет
+                                              Личный кабинет
                                           </a>
                                       </li>
                                     @endif
