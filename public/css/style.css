@@ -97,17 +97,33 @@ footer {
 .article_button{
 	margin: 10px 0px;
 	width: 30%;
-	display: inline;
 }
 
 body{
 	background-color: rgba(29,113,184,0.1);
 }
 
+table {
+	margin: 10px;
+	width: 100%;
+}
+td {
+	padding-right: 5px;
+	padding-right: 5px;
+}
 tr {
 	border-bottom: 1px solid #eee;
 }
 #header {
 	font-weight: bold;
 	text-align: center;
+}
+
+h2 {
+	text-align: center;
+}
+
+#number {
+	width: 30%;
+	display: inline;
 }

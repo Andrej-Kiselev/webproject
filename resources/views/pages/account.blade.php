@@ -19,23 +19,23 @@
     <form>
       <input type="button"class="btn btn-lg btn-info article_button" value="Добавить статью" onClick='location.href="showaddpubl"'>
     </form>
-    <button type="button" class="btn btn-lg btn-info article_button" style="width: 38%;">Редактировать статью</button>
-    <button type="button" class="btn btn-lg btn-info article_button">Удалить статью</button>
-    <button type="button" class="btn btn-lg btn-info " href="showallusers">Показать всех авторов</button>
-
-    <!--Циклический вывод работ автора и соавторов из БД-->
-    <table style="margin: 10px; width: 100%;">
+        <!--Циклический вывод работ автора и соавторов из БД-->
+    <table>
       <tr id="header">
-        <td>Автор</td>
-        <td>Название</td>
+        <td>Авторы</td>
+        <td>Название</td><td></td><td></td>
+      </tr>
+      <tr>
+        <td>Автор Автор Автор Автор Автор Автор Автор Автор</td>
+        <td>НазваниеНазваниеНазваниеНазвание НазваниеНазваниеНазваниеНазвание</td>
+        <td><a href="#"><span class="glyphicon glyphicon-pencil"></span></a></td>
+        <td><a href="#"><span class="glyphicon glyphicon-trash"></span></a></td>
       </tr>
       <tr>
         <td>Автор</td>
         <td>Название</td>
-      </tr>
-      <tr>
-        <td>Автор</td>
-        <td>Название</td>
+        <td><a href="#"><span class="glyphicon glyphicon-pencil"></span></a></td>
+        <td><a href="#"><span class="glyphicon glyphicon-trash"></span></a></td>
       </tr>
     </table>
   </div>
