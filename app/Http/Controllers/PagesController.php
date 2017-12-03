@@ -41,7 +41,8 @@ class PagesController extends Controller
     public function showFormToAddPublication()
     {
         $PublishHouses = PublishingHouse::all();
-        return view ('pages.addpublication', ['PublishHouses' => $PublishHouses]);
+        $users = User::all()->where('role', '<>', 'admin');
+        return view ('pages.addpublication', ['PublishHouses' => $PublishHouses, 'users'=>$users]);
     }
 
     public function addpublication(\Illuminate\Http\Request $request)

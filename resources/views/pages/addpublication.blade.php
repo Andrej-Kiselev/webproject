@@ -2,12 +2,18 @@
 
 @section('content')
 <script type="text/javascript">
-$(document).ready(function() {
-  var count = 0;
-  $("a#new").click(function(){
-    $('#coauthors').prepend('<select id=\"number\" name=\"user' + (count++) + '\" class=\"form-control\" ondblclick=\"$(this).remove();\" ><option></option></select>');
-  });
-})
+    $(document).ready(function () {
+        var count = 2;
+        var sel_source = document.getElementById("number");
+        $("a#new").click(function () {
+            $('#coauthors').prepend('<select id=\"number' + (count)
+                + '\" name=\"user' + (count) + '\" class=\"form-control\" ondblclick=\"$(this).remove();\" >' +
+                '<option></option></select>');
+            var sel2 = document.getElementById("number" + count);
+            sel2.innerHTML = sel_source.innerHTML;
+            count++;
+        });
+    })
 </script>
 
 <div>
@@ -20,11 +26,18 @@ $(document).ready(function() {
 
       <div style="float: left; width: 45%;">
         <p>Соавторы:</p>
+
         <div id="coauthors" class="form-group">
-          <a id="new" onclick='create();'><span class="glyphicon glyphicon-plus"></span></a>
+            <select id="number" name="user1" class="form-control" ondblclick="$(this).remove();">
+                @foreach($users as $user)
+                    <option value="{{$user->id}}" >{{$user->surname." ".$user->name." ".$user->patronymic}}</option>
+                @endforeach
+            </select>
+
+            <a id="new" onclick='create();'><span class="glyphicon glyphicon-plus"></span></a>
         </div>
         <div class="form-group">
-            <textarea class="form-control" placeholder="Название" name="name" rows="1"></textarea>
+            <textarea class="form-control" placeholder="Название" name="name_of_publication" rows="1"></textarea>
         </div>
         <div class="form-group">
             <textarea class="form-control" placeholder="Аннотация" name="annotation" rows="4"></textarea>
