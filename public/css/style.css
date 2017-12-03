@@ -124,6 +124,7 @@ h2 {
 }
 
 #number {
+	margin-bottom:5px;
 	width: 30%;
 	display: inline;
 }

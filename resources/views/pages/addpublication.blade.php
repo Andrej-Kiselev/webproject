@@ -1,6 +1,15 @@
 @extends('app')
 
 @section('content')
+<script type="text/javascript">
+$(document).ready(function() {
+  var count = 0;
+  $("a#new").click(function(){
+    $('#coauthors').prepend('<select id=\"number\" name=\"user' + (count++) + '\" class=\"form-control\" ondblclick=\"$(this).remove();\" ><option></option></select>');
+  });
+})
+</script>
+
 <div>
     <h2>Добавление публикации</h2>
     <br>
@@ -10,8 +19,9 @@
         <input type="hidden" name="record" value="">
 
       <div style="float: left; width: 45%;">
-        <div class="form-group">
-            <textarea class="form-control" placeholder="Соавторы" name="coauthors" rows="1"></textarea>
+        <p>Соавторы:</p>
+        <div id="coauthors" class="form-group">
+          <a id="new" onclick='create();'><span class="glyphicon glyphicon-plus"></span></a>
         </div>
         <div class="form-group">
             <textarea class="form-control" placeholder="Название" name="name" rows="1"></textarea>
