@@ -1,7 +1,28 @@
 @extends('app')
 
 @section('content')
-<p>
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-</p>
+<h3>НАПРАВЛЕНИЯ ПОДГОТОВКИ</h3>
+<div style="float: left; width: 50%;">
+  <p id="header">Информационные системы и технологии (09.03.02)</p>
+  <ul>
+    <li>Бакалавриат, Магистратура</li>
+    <li>Формы обучения: очная, заочная</li>
+    <li>Бюджетых мест: 53, квота: 6</li>
+    <li>Стоимость обучения: 92 000 руб/год (35 000 руб/год для заочной ФО)</li>
+    <li>Проходной ЕГЭ: 103 (Информатика и ИКТ; Математика; Русский язык)</li>
+  </ul>
+  <p><b>Описание направления:</b> <a href="https://www.sevsu.ru/rus/admission/item/270-informatsionnye-sistemy-i-tekhnologii-bakalavriat">Информационные системы и технологии. Бакалавриат</a></p>
+</div>
+<div style="float: right; width: 50%;">
+  <p id="header">Прикладная информатика (09.03.03)</p>
+  <ul>
+    <li>Бакалавриат</li>
+    <li>Формы обучения: очная</li>
+    <li>Бюджетых мест: 30, квота: 3</li>
+    <li>Стоимость обучения: 92 000 руб/год</li>
+    <li>Проходной ЕГЭ: 103 (Информатика и ИКТ; Математика; Русский язык)</li>
+  </ul>
+  <p><b>Описание направления:</b> <a href="https://www.sevsu.ru/rus/admission/item/1975-priklodnaya-informatika-bakalavriat">Прикладная информатика. Бакалавриат</a></p>
+</div>
+
 @stop

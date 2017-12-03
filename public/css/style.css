@@ -117,14 +117,15 @@ tr {
 #header {
 	font-weight: bold;
 	text-align: center;
+	font-size: 16px;
 }
 
-h2 {
+h2, h3 {
 	text-align: center;
 }
 
 #number {
-	margin-bottom:5px;
+	margin-bottom: 5px;
 	width: 30%;
 	display: inline;
 }
