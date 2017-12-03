@@ -22,21 +22,41 @@
         <!--Циклический вывод работ автора и соавторов из БД-->
     <table>
       <tr id="header">
-        <td>Авторы</td>
-        <td>Название</td><td></td><td></td>
-      </tr>
-      <tr>
-        <td>Автор Автор Автор Автор Автор Автор Автор Автор</td>
-        <td>НазваниеНазваниеНазваниеНазвание НазваниеНазваниеНазваниеНазвание</td>
-        <td><a href="#"><span class="glyphicon glyphicon-pencil"></span></a></td>
-        <td><a href="#"><span class="glyphicon glyphicon-trash"></span></a></td>
-      </tr>
-      <tr>
-        <td>Автор</td>
         <td>Название</td>
+        <td>Авторы</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Название</td>
+        <td>Автор</td>
         <td><a href="#"><span class="glyphicon glyphicon-pencil"></span></a></td>
         <td><a href="#"><span class="glyphicon glyphicon-trash"></span></a></td>
       </tr>
+
+      @foreach($publications as $publication)
+        @foreach($publUsers as $record)
+
+          @if($record->user_id == Auth::user()->id && $publication->id == $record->id)
+            <tr>
+              <td> {{$publication->name_of_publication}}</td>
+              <td>
+                @foreach($publUsers as $publAuthor)
+                  @if($publication->id == $publAuthor->id)
+                    {{$publAuthor->surname." ".$publAuthor->name." ".$publAuthor->patronymic}}
+                    <br>
+                  @endif
+                @endforeach
+              </td>
+              <td><a href="#"><span class="glyphicon glyphicon-pencil"></span></a></td>
+              <td><a href="#"><span class="glyphicon glyphicon-trash"></span></a></td>
+            </tr>
+            @break
+          @endif
+
+        @endforeach
+      @endforeach
+
     </table>
   </div>
 </div>
