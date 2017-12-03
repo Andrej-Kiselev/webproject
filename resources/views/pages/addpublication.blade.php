@@ -4,7 +4,7 @@
 <script type="text/javascript">
     $(document).ready(function () {
         var count = 2;
-        var sel_source = document.getElementById("number");
+        var sel_source = document.getElementById("number1");
         $("a#new").click(function () {
             $('#coauthors').prepend('<select id=\"number' + (count)
                 + '\" name=\"user' + (count) + '\" class=\"form-control\" ondblclick=\"$(this).remove();\" >' +
@@ -28,7 +28,7 @@
         <p>Соавторы:</p>
 
         <div id="coauthors" class="form-group">
-            <select id="number" name="user1" class="form-control" ondblclick="$(this).remove();">
+            <select id="number1" name="user1" class="form-control" ondblclick="$(this).remove();">
                 @foreach($users as $user)
                     <option value="{{$user->id}}" >{{$user->surname." ".$user->name." ".$user->patronymic}}</option>
                 @endforeach

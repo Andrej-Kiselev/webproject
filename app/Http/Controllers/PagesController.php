@@ -41,15 +41,29 @@ class PagesController extends Controller
     public function showFormToAddPublication()
     {
         $PublishHouses = PublishingHouse::all();
-        $users = User::all()->where('role', '<>', 'admin');
+        $users = User::all()->where('role', '<>', 'admin')
+                            ->where('id','<>', Auth::user()->id);
         return view ('pages.addpublication', ['PublishHouses' => $PublishHouses, 'users'=>$users]);
     }
 
     public function addpublication(\Illuminate\Http\Request $request)
     {
-        $inputPublicationData = $request->all();
-        $inputPublicationData['user_id'] = Auth::user()->id;
-        Publication::create($inputPublicationData);
+        $publication = new Publication;
+        $publication['publishing_houses_id'] = $request['publishing_houses_id'];
+        $publication['name_of_publication'] = $request['name_of_publication'];
+        $publication['annotation'] = $request['annotation'];
+        $publication['number_of_publication'] = $request['number_of_publication'];
+        $publication['number_of_pages'] = $request['number_of_pages'];
+        $publication['year'] = $request['year'];
+        $publication['user_id'] = Auth::user()->id; //кто именно внёс запись в БД
+        $publication->save();
+        $publication->users()->attach(Auth::user()->id);
+        for ($i = 1; $i < 30; $i++)
+        {
+            if($request['user'.$i])
+                $publication->users()->attach($request['user'.$i]);
+        }
+
         return redirect()->route('account');
     }
 }
