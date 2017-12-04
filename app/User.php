@@ -14,7 +14,7 @@ class User extends Model implements Authenticatable
     use Notifiable, AuthenticableTrait;
 
     protected $fillable = [
-        'name', 'email', 'password', 'surname', 'patronymic',
+        'name', 'email', 'password', 'surname', 'patronymic', 'image',
     ];
     protected $hidden = [
         'password', 'remember_token',

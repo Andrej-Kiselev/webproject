@@ -17,6 +17,7 @@ class AdminPagesController extends Controller
     {
         $user = new User();
         $inputUserData = $request->all();
+        $inputUserData['image'] = 'Earth-Vector-Wallpaper-544x340.png';
         $inputUserData['password'] = bcrypt($request['password']);
         User::create($inputUserData);
         return redirect()->to('admin');
