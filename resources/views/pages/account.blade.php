@@ -47,7 +47,7 @@
                   @endif
                 @endforeach
               </td>
-              <td><a href="#"><span class="glyphicon glyphicon-pencil"></span></a></td>
+              <td><a href="editor/{{$publication->id}}/edit"><span class="glyphicon glyphicon-pencil"></span></a></td>
               <td><a href="/user/publish/{{$publication->id}}"><span class="glyphicon glyphicon-trash"></span></a></td>
             </tr>
             @break

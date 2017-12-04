@@ -44,3 +44,4 @@ Route::get('/admin/user/{id}', 'AdminPagesController@deleteUser');
 Route::get('/admin/publish/{id}', 'AdminPagesController@deletePublic');
 
 Route::get('/user/publish/{id}', 'mainPageController@deletePublic');
+Route::resource('editor', 'editController');
