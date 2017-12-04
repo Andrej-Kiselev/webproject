@@ -41,7 +41,7 @@
       </tr>
       @foreach($usersList as $user)
         <tr>
-          <td>{{$user->surname}}{{$user->name}}{{$user->patronymic}}</td>
+          <td>{{$user->surname}} {{$user->name}} {{$user->patronymic}}</td>
           <td>{{$user->email}}</td>
           <td><a id="{{$user->id}}" href="/admin/user/{{$user->id}}"><span class="glyphicon glyphicon-trash"></span></a></td>
         </tr>

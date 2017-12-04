@@ -4,10 +4,15 @@
 <div class="row main" style="margin-top: 20px;">
   <div class="col-md-4">
     <div class="thumbnail">
-      <img src="/images/Earth-Vector-Wallpaper-544x340.png" alt="...">
-        <div class="caption">
-          <button type="button" class="btn btn-lg btn-info btn-block" style="margin: 10px 0px">Загрузить фотографию</button>
-        </div>
+      <img src="/images/{{Auth::user()->image}}" alt="...">
+
+        <form enctype="multipart/form-data" action="/profile" method="POST">
+          <input style="margin: 10px 0px" class="btn btn-lg btn-info btn-block" type="file" name="avatar">
+          <input type="hidden" name="_token" value="{{ csrf_token() }}">
+          <input type="submit" class="btn btn-lg btn-info btn-block" value="Загрузить" style="margin: 10px 0px">
+        </form>
+
+
     </div>
   </div>
   <div class="col-md-7">
@@ -43,7 +48,7 @@
                 @endforeach
               </td>
               <td><a href="#"><span class="glyphicon glyphicon-pencil"></span></a></td>
-              <td><a href="#"><span class="glyphicon glyphicon-trash"></span></a></td>
+              <td><a href="/user/publish/{{$publication->id}}"><span class="glyphicon glyphicon-trash"></span></a></td>
             </tr>
             @break
           @endif

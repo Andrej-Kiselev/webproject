@@ -33,6 +33,8 @@ Route::get('account', 'PagesController@account')
     ->middleware('auth')->name('account');
 Auth::routes();
 
+Route::post('/profile', 'mainPageController@updateImage')->middleware('auth');
+
 Route::get('/notAllow', 'HomeController@index')->name('home');
 
 Route::post('/addpublication', 'PagesController@addpublication');
@@ -40,3 +42,5 @@ Route::post('/adduser', 'AdminPagesController@addUser');
 Route::post('/addPubl', 'AdminPagesController@addPublic');
 Route::get('/admin/user/{id}', 'AdminPagesController@deleteUser');
 Route::get('/admin/publish/{id}', 'AdminPagesController@deletePublic');
+
+Route::get('/user/publish/{id}', 'mainPageController@deletePublic');
