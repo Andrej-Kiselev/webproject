@@ -18,7 +18,9 @@ class PagesController extends Controller
 
     public function science()
     {
-        return view('pages/science');
+        $publUsers = Publication::getTablePublicationUsers();
+        $publications = Publication::paginate(5);
+        return view('pages/science', ['publUsers' => $publUsers, 'publications' => $publications]);
     }
 
     public function contacts()

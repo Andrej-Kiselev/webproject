@@ -26,4 +26,32 @@
     <li>Международный конкурс дипломных работ "MAESTRO OF SCIENCE – 2016» – 2-е место, Доронина Екатерина, Поддубный Алексей.</li>
   </ul>
 </p>
+<br>
+<p>Также Вы можете просмотреть публикации статей, выпущенных сотрудниками только нашей кафедры!</p>
+<table>
+  <tr id="header">
+    <td>Название</td>
+    <td>Авторы</td>
+  </tr>
+
+  @foreach($publications as $publication)
+    @foreach($publUsers as $record)
+
+        <tr>
+          <td> {{$publication->name_of_publication}}</td>
+          <td>
+            @foreach($publUsers as $publAuthor)
+              @if($publication->id == $publAuthor->id)
+                {{$publAuthor->surname." ".$publAuthor->name." ".$publAuthor->patronymic.',   '}}
+
+              @endif
+            @endforeach
+          </td>
+        </tr>
+        @break
+
+    @endforeach
+  @endforeach
+
+</table>{{ $publications->links() }}
 @stop
